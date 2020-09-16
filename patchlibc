@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+    echo "usage: $0 <elf_path> [ld_path=./ld-2.23.so]"
+    echo "example $0 ./pwn ./ld-2.27.so"
+    exit 0
+fi
+
+LD_PATH=$2
+LD_PATH=${LD_PATH:=./ld-2.23.so}
+#echo $1
+#echo $2
+#echo $LD_PATH
+cp "$1" "$1p"
+echo "patchelf "$1p" --set-interpreter $LD_PATH --set-rpath ."
+patchelf "$1p" --set-interpreter $LD_PATH --set-rpath .
