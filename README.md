@@ -5,7 +5,9 @@ use any ubuntu glibc in any ubuntu version (with debug info)! a essential tool f
 ## install
 
 install eu-unstrip
+
 install [patchelf](https://github.com/NixOS/patchelf)
+
 make them in PATH
 
 ## usage
