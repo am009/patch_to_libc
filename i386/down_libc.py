@@ -7,7 +7,7 @@ import os
 # code_names = ['xenial', 'bionic']
 
 if len(sys.argv) < 2:
-    print('usage: {} <version> [codename] [arch=amd64]'.format(sys.argv[0]))
+    print('usage: {} <version> [codename] [arch=i386]'.format(sys.argv[0]))
     print('example: {} 2.23-0ubuntu5 xenial'.format(sys.argv[0]))
     exit(0)
 
@@ -15,7 +15,7 @@ version = sys.argv[1]
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-if len(sys.argv) > 2:
+if len(sys.argv) >= 3:
     code_name = sys.argv[2]
 else:
     if sys.argv[1].startswith('2.23'):
@@ -26,10 +26,10 @@ else:
         print('{}: unable to detect codename!'.format(sys.argv[0]))
         exit(0)
 
-if len(sys.argv) > 3:
+if len(sys.argv) >= 4:
     arch = sys.argv[3]
 else:
-    arch = 'amd64'
+    arch = 'i386'
 
 def download_file(url):
     local_filename = url.split('/')[-1]
@@ -45,7 +45,7 @@ def download_file(url):
     return local_filename
 
 def get_package_deb(package, code_name, version):
-    # https://bugs.launchpad.net/ubuntu
+    # https://bugs.launchpad.net/ubuntu/xenial/i386/libc6/2.23-0ubuntu6
     url = 'https://bugs.launchpad.net/ubuntu/{}/{}/{}/{}'.format(code_name, arch, package, version)
 
     print('accessing: {}'.format(url))

@@ -21,6 +21,7 @@ GNU C Library (Ubuntu GLIBC 2.23-0ubuntu6) stable release version 2.23, by Rolan
 `get_libc` can download specified version of ubuntu glibc into current dir.
 ```
 get_libc 2.23-0ubuntu5
+get_libc 2.27-3ubuntu1
 ```
 or 
 ```

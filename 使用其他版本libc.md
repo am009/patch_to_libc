@@ -33,3 +33,19 @@ ubuntu16.04.11.2 => 2.23-0ubuntu11.2
 ubuntu16.04-update => 2.23-0ubuntu11
 ubuntu18.04 => 2.27-3ubuntu1
 ubuntu18.04.2 => 2.27-3ubuntu1.2
+
+## ubuntu codenames
+2.20	Ubuntu 14.04 LTS (Trusty Tahr)
+2.21	Ubuntu 14.10 (Utopic Unicorn)
+2.22	Ubuntu 15.04 (Vivid Vervet)
+2.23	Ubuntu 15.10 (Wily Werewolf)
+2.24	Ubuntu 16.04 LTS (Xenial Xerus)
+2.25	Ubuntu 16.10 (Yakkety Yak)
+2.26	Ubuntu 17.04 (Zesty Zapus)
+2.27	Ubuntu 17.10 (Artful Aardvark)
+2.28	Ubuntu 18.04 LTS (Bionic Beaver)
+2.29	Ubuntu 18.10 (Cosmic Cuttlefish)
+2.30	Ubuntu 19.04 (Disco Dingo)
+2.31	Ubuntu 19.10 (Eoan Ermine)
+2.32	Ubuntu 20.04 LTS (Focal Fossa)
+2.33	Ubuntu 20.10 (Groovy Gorilla)

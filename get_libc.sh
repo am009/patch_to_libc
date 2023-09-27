@@ -7,7 +7,7 @@ if [ $# -lt 1 ]; then
     exit 0
 fi
 
-LIBCSPATH=/mnt/D/ctf/tools/libcs
+LIBCSPATH=/mnt/D/ctf/tools/patch_to_libc
 
 if [ ! -d "$LIBCSPATH/$1" ]; then
     echo "start to get libc..."

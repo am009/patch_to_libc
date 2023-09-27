@@ -1,0 +1,21 @@
+#!/bin/sh
+# merge-libc 2.27-3ubuntu1 ubuntu18.04
+
+mkdir libc6-$1-dbgextract
+dpkg -x ./libc6_$1_i386.deb libc6-$1-dbgextract/
+mkdir libc6-dbg-$1-dbgextract
+dpkg -x ./libc6-dbg_$1_i386.deb libc6-dbg-$1-dbgextract/
+
+# mkdir $2
+cp -r ./libc6-dbg-$1-dbgextract/usr/lib/debug/lib/i386-linux-gnu/ ./$2
+
+# eu-unstrip STRIPPED-FILE DEBUG-FILE
+for file in `ls ./$2`
+do
+    eu-unstrip ./libc6-$1-dbgextract/lib/i386-linux-gnu/$file ./$2/$file 
+done
+
+rm -rf ./libc6-dbg-$1-dbgextract
+rm -rf ./libc6-$1-dbgextract
+rm ./libc6_$1_i386.deb
+rm ./libc6-dbg_$1_i386.deb
